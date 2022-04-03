@@ -61,7 +61,10 @@ If CORS error occurs use Moesif Plugin in Chrome (Handled in Express in some cas
 
 Heroku URL for Get all word from DB:
 
-### BaseURL : [https://incubyte-words-node-api.herokuapp.com](`https://incubyte-words-node-api.herokuapp.com`)
+### BaseURL : 
 
+[https://incubyte-words-node-api.herokuapp.com](`https://incubyte-words-node-api.herokuapp.com`)
 
-### Simple Get Path : [https://incubyte-words-node-api.herokuapp.com/words](`https://incubyte-words-node-api.herokuapp.com/words`)
+### Simple Get Path : 
+
+[https://incubyte-words-node-api.herokuapp.com/words](`https://incubyte-words-node-api.herokuapp.com/words`)
