@@ -24,7 +24,7 @@ app.use(limiter);
 
 const isProduction = process.env.NODE_ENV === "production";
 const origin = {
-  origin: isProduction ? "https://incubyte-words-node-api.herokuapp.com" : "*",
+  origin: isProduction ? "http://localhost:3002" : "*",
 };
 
 app.use(cors(origin));
