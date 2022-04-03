@@ -22,13 +22,13 @@ npm install
 npm run start:dev
 ```
 
-Default running port 3002
+Default running port 3003
 
 For FrontEnd
 
 > goto /frontend/index.html
 
-And the front end local dev setup configured with 3002
+And the front end local dev setup configured with 3003
 
 #### DOCS API Enpoints
 
