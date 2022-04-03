@@ -1,7 +1,7 @@
 console.log("Word List");
 
-
-const url = "https://incubyte-words-node-api.herokuapp.com";
+// const url = "https://incubyte-words-node-api.herokuapp.com";
+const url = "http://localhost:3003";
 
 let wordsList = [];
 
@@ -94,7 +94,7 @@ const renderUi = () => {
   wordContainer.innerHTML = "";
   wordList.forEach((element, index) => {
     // Li Element
-    
+
     let tempLi = document.createElement("li");
     tempLi.setAttribute("id", `li-${element.id}`);
     // Span for view word texts

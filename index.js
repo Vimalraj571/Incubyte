@@ -13,26 +13,30 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(compression());
 app.use(helmet());
-app.use(cors);
 
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
-  max: 5, // 5 requests,
+  max: 15, // 15 requests,
 });
-
-app.use(limiter);
-
-const isProduction = process.env.NODE_ENV === "production";
-const origin = {
-  origin: isProduction ? "http://localhost:3002" : "*",
-};
-
-app.use(cors(origin));
 
 const postLimiter = rateLimit({
   windowMs: 1 * 60 * 1000,
   max: 1,
 });
+
+if (!process.env.NODE_ENV === "dev") {
+  app.use(limiter);
+}
+
+const isProduction = process.env.NODE_ENV === "production";
+const origin = {
+  origin: "*",
+  methods: "GET,PUT,POST,DELETE",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+
+app.use(cors(origin));
 
 app.get("/", (req, res) => {
   res.send("TEST");
@@ -45,11 +49,11 @@ app.post(
   postLimiter,
   db.postWord
 );
-// app.get('/word/:id', db.getWord);
-// app.put('/word/:id', db.editWord);
-// app.delete('/word/:id', db.deleteWord);
+app.get("/word/:id", db.getWord);
+app.put("/word/:id", db.editWord);
+app.delete("/word/:id", db.deleteWord);
 
 // Start server
-app.listen(process.env.PORT || 3002, () => {
+app.listen(process.env.PORT || 3003, () => {
   console.log(`Server listening`);
 });
