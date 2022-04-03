@@ -6,8 +6,6 @@ Tech stack used
 
 ##### VanilaJS + NodeJS + Postgresql
 
-&nbsp;
-
 ### How to use it ?
 
 First setup the db using init.sql
@@ -63,8 +61,8 @@ Heroku URL for Get all word from DB:
 
 ### BaseURL : 
 
-[https://incubyte-words-node-api.herokuapp.com](`https://incubyte-words-node-api.herokuapp.com`)
+[https://incubyte-words-node-api.herokuapp.com](https://incubyte-words-node-api.herokuapp.com)
 
 ### Simple Get Path : 
 
-[https://incubyte-words-node-api.herokuapp.com/words](`https://incubyte-words-node-api.herokuapp.com/words`)
+[https://incubyte-words-node-api.herokuapp.com/words](https://incubyte-words-node-api.herokuapp.com/words)
