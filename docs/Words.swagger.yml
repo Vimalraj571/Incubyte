@@ -1,0 +1,87 @@
+openapi: 3.0.0
+info:
+  title: Words Postman Collections
+  description: ''
+  version: 1.0.0
+servers:
+  - url: localhost://
+paths:
+  /words:
+    get:
+      tags:
+        - default
+      summary: Get Words
+      description: localhost:3003/words
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /word:
+    post:
+      tags:
+        - default
+      summary: Post New Word
+      description: localhost:3003/word
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                word: new_from_postman
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /word/1:
+    get:
+      tags:
+        - default
+      summary: Get Word By ID
+      description: localhost:3003/word/1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - default
+      summary: Edit Word
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                word: this_is_append
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /word/4:
+    delete:
+      tags:
+        - default
+      summary: Delete Word
+      description: localhost:3003/word/4
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

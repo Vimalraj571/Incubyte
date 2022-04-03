@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Words Postman Collections",
+		"_postman_id": "9cd5fe63-f74a-7146-75cd-bcc7cc72a09e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Words",
+			"request": {
+				"url": "localhost:3003/words",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "localhost:3003/words"
+			},
+			"response": []
+		},
+		{
+			"name": "Post New Word",
+			"request": {
+				"url": "localhost:3003/word",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"word\" : \"new_from_postman\"\n}"
+				},
+				"description": "localhost:3003/word"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Word By ID",
+			"request": {
+				"url": "localhost:3003/word/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "localhost:3003/word/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Word",
+			"request": {
+				"url": "localhost:3003/word/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"word\":\"this_is_append\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Word",
+			"request": {
+				"url": "localhost:3003/word/4",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "localhost:3003/word/4"
+			},
+			"response": []
+		}
+	]
+}
