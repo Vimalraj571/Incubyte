@@ -58,3 +58,10 @@ NOTE:
 If CORS error occurs use Moesif Plugin in Chrome (Handled in Express in some cases if occurs)
 
 [Moesif Chrome Plug in Link](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc)
+
+Heroku URL for Get all word from DB:
+
+### BaseURL : [https://incubyte-words-node-api.herokuapp.com](`https://incubyte-words-node-api.herokuapp.com`)
+
+
+### Simple Get Path : [https://incubyte-words-node-api.herokuapp.com/words](`https://incubyte-words-node-api.herokuapp.com/words`)
