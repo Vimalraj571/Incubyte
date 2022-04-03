@@ -1,0 +1,35 @@
+{
+  "name": "incubyte",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "11.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vimalraj571/Incubyte.git"
+  },
+  "keywords": [],
+  "author": "Vimal Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vimalraj571/Incubyte/issues"
+  },
+  "homepage": "https://github.com/Vimalraj571/Incubyte#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-rate-limit": "^6.3.0",
+    "express-validator": "^6.14.0",
+    "helmet": "^5.0.2",
+    "pg": "^8.7.3"
+  }
+}
