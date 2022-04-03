@@ -1,7 +1,7 @@
 console.log("Word List");
 
-// const url = "https://incubyte-words-node-api.herokuapp.com";
-const url = "http://localhost:3003";
+const url = "https://incubyte-words-node-api.herokuapp.com";
+// const url = "http://localhost:3003";
 
 let wordsList = [];
 
@@ -19,6 +19,7 @@ const postWord = (input) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "ApiKey": "rdj"
     },
     body: JSON.stringify({ word: input }),
   })
