@@ -55,9 +55,15 @@ and upload the Words.swagger.yml
 
 
 NOTE:
-If CORS error occurs use Moesif Plugin in Chrome (Handled in Express in some cases if occurs)
+1.  If CORS error occurs use Moesif Plugin in Chrome (Handled in Express in some cases if occurs)
 
-[Moesif Chrome Plug in Link](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc)
+    [Moesif Chrome Plug in Link](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc)
+
+2.  For UI frontend change the url to `localhost:3003` If you run services as local else use `https://incubyte-words-node-api.herokuapp.com`
+    When making the post request to the post word `app_ui.js line 22` enable/disable the `"ApiKey": "rdj"`
+    1. if running as `localhost:3003` comment(disable) the line `app_ui.js line 22`
+    2. if running as `https://incubyte-words-node-api.herokuapp.com` uncomment(enable) the line `app_ui.js line 22`
+    3. Default host as Heroku URL
 
 Heroku URL for Get all word from DB:
 
@@ -65,3 +71,5 @@ Heroku URL for Get all word from DB:
 
 
 ### Simple Get Path : [https://incubyte-words-node-api.herokuapp.com/words](`https://incubyte-words-node-api.herokuapp.com/words`)
+
+

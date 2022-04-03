@@ -19,7 +19,7 @@ const postWord = (input) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "ApiKey": "rdj"
+      // "ApiKey": "rdj"
     },
     body: JSON.stringify({ word: input }),
   })
