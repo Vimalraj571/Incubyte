@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(compression());
 app.use(helmet());
+app.use(cors);
 
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
@@ -23,7 +24,7 @@ app.use(limiter);
 
 const isProduction = process.env.NODE_ENV === "production";
 const origin = {
-  origin: isProduction ? "https://incubyte-words-node-api.herokuapp.com/" : "*",
+  origin: isProduction ? "https://incubyte-words-node-api.herokuapp.com" : "*",
 };
 
 app.use(cors(origin));
