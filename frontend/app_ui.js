@@ -94,6 +94,7 @@ const renderUi = () => {
   wordContainer.innerHTML = "";
   wordList.forEach((element, index) => {
     // Li Element
+
     let tempLi = document.createElement("li");
     tempLi.setAttribute("id", `li-${element.id}`);
     // Span for view word texts

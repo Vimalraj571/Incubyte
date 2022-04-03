@@ -13,7 +13,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(compression());
 app.use(helmet());
-app.use(cors);
 
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
@@ -29,6 +28,7 @@ if (!process.env.NODE_ENV === "dev") {
   app.use(limiter);
 }
 
+const isProduction = process.env.NODE_ENV === "production";
 const origin = {
   origin: "*",
   methods: "GET,PUT,POST,DELETE",
